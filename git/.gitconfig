@@ -1,0 +1,22 @@
+[include]
+	path = .gitconfig.base
+
+[include]
+	path = .gitconfig.user
+
+# git's wildmatch doesn't support {}..
+
+[includeIf "gitdir:C:/**"]
+	path = .gitconfig.windows
+	
+[includeIf "gitdir:D:/**"]
+	path = .gitconfig.windows
+
+[includeIf "gitdir:E:/**"]
+	path = .gitconfig.windows
+
+[includeIf "gitdir:F:/**"]
+	path = .gitconfig.windows
+
+[includeIf "gitdir:G:/**"]
+	path = .gitconfig.windows

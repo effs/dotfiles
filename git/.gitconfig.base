@@ -1,0 +1,65 @@
+[init]
+	defaultBranch = main
+[alias]
+	aliases = "!git config -l | grep alias | cut -c 7-"
+	alias = config --global --add
+	unalias = config --global --unset-all
+
+	up = !git fetch && git rebase origin/master
+	pushit = push origin $(git branch --show-current)
+
+	l = log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+
+	s = status -unormal -s
+	sa = status -unormal --ignored -s
+
+	sh = show
+
+	d = diff
+
+	a = add
+	ac = a --dry-run
+	af = add
+	ap = add --patch
+	aa = add -u .
+
+	discard = co HEAD
+
+	unstage = restore --staged
+	unstage-all = unstage .
+
+	res = reset HEAD^
+	hardres = reset --hard HEAD^
+
+	c = commit -v
+	cm = commit -m
+	amend = commit --amend
+
+	co = checkout
+	newbranch = checkout -b
+	
+	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	ba = b -a
+	bn = newbranch
+
+	wt = worktree
+	wtl = worktree list
+	wtadd = "!fn() { git worktree add -b $2 ../$1 $3; git wts $1; }; fn"
+	wta-frommain = "!fn() { if [ -d .git ]; then git worktree add -b $2 ../$1 $3; git wts $1; exit 0; fi; echo you-are-in-the-wrong-dir-dummy; exit 1; }; fn"
+    wta = wtadd
+	wtremove = "!EX=$(git wtb $1); fn() { git worktree remove $1 && git branch -d $EX; }; fn"
+	wtremoveforce = "!EX=$(git wtb $1); fn() { git worktree remove --force $1 && git branch -D $EX; }; fn"
+	wtbranch = "!fn() { echo $(git worktree list | rg $1 | cut -d '[' -f 2 | cut -d ']' -f 1); }; fn"
+    wtb = wtbranch
+	wtdir = "!fn() { echo $(git wtl | rg $1 | cut -d ' ' -f 1); }; fn"
+    wtd = wtdir
+	wtswitch = "!fn() { cd ../$1 && wt -w 0 nt -d .; }; fn"
+    wts = wtswitch
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rerere]
+	enabled = true
