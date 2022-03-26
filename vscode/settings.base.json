@@ -1,0 +1,173 @@
+{
+    "Lua.runtime.version": "LuaJIT",
+    "Lua.workspace.preloadFileSize": 300000,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.enableNeovim": true,
+    "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.highlightedyank.enable": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.matchpairs": "(:),{:},[:],<:>",
+    "vim.leader": ",",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [",", "h"],
+            "after": ["<Esc>"]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["R"],
+            "after": ["N"]
+        },
+        {
+            "before": ["N"],
+            "after": ["n"]
+        },
+        {
+            "before": ["h"],
+            "after": ["h"]
+        },
+        {
+            "before": ["t"],
+            "after": ["k"]
+        },
+        {
+            "before": ["n"],
+            "after": ["j"]
+        },
+        {
+            "before": ["s"],
+            "after": ["l"]
+        },
+        {
+            "before": ["`"],
+            "commands": [":set hls!"]
+        },
+        {
+            "before": ["<Leader>", "s"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<Leader>", "w"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<Leader>", "p"],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "t"],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "w"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<Space>", "<Space>"],
+            "after": ["<Enter>"]
+        },
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["h"],
+            "after": ["h"]
+        },
+        {
+            "before": ["t"],
+            "after": ["k"]
+        },
+        {
+            "before": ["n"],
+            "after": ["j"]
+        },
+        {
+            "before": ["s"],
+            "after": ["l"]
+        },
+        {
+            "before": ["`"],
+            "commands": [":set hls!"]
+        },
+        {
+            "before": ["<Space>", "<Space>"],
+            "after": ["<Enter>"]
+        },
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+    ],
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Space>", "<Space>"],
+            "after": ["<Enter>"]
+        },
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "Lua.telemetry.enable": false,
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "git.autofetch": "all",
+    "editor.renderWhitespace": "all",
+    "eslint.alwaysShowStatus": true,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "explorer.confirmDelete": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "powershell.startAsLoginShell.linux": true,
+    "workbench.editor.titleScrollbarSizing": "large",
+    "workbench.editor.wrapTabs": true,
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.scrollback": 5000,
+    "terminal.integrated.shellIntegration.enabled": true,
+    "workbench.startupEditor": "none",
+    "extensions.ignoreRecommendations": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Dracula Soft",
+    "editor.fontFamily": "'Fira Code', Consolas",
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "normal",
+    "editor.tokenColorCustomizations": {
+        "functions": "#9bee94",
+        "textMateRules": [
+            {
+                "scope": ["storage.type"],
+                "settings": {
+                    "foreground": "#fdc2e3",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": ["storage.type"],
+                "settings": {
+                    "foreground": "#f286c4",
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.openDefaultKeybindings": true
+}
