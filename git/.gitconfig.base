@@ -6,7 +6,9 @@
 	unalias = config --global --unset-all
 
 	up = !git fetch && git rebase origin/master
-	pushit = push origin $(git branch --show-current)
+	
+	pushit = "!fn() { git push --tags origin $(git branch --show-current); }; fn"
+	pushitf = "!fn() { git push --tags --force-with-lease origin $(git branch --show-current); }; fn"
 
 	l = log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
 
