@@ -1,4 +1,5 @@
 {
+    "vim.neovimPath": "invalid",
     "Lua.runtime.version": "LuaJIT",
     "Lua.workspace.preloadFileSize": 300000,
     "vim.useSystemClipboard": true,
@@ -15,6 +16,10 @@
     "vim.matchpairs": "(:),{:},[:],<:>",
     "vim.leader": ",",
     "vim.insertModeKeyBindings": [
+        {
+            "before": ["h", "u"],
+            "after": ["<Esc>"]
+        },
         {
             "before": [",", "h"],
             "after": ["<Esc>"]
@@ -76,6 +81,24 @@
             ]
         },
         {
+            "before": ["<Leader>", "c"],
+            "commands": [
+                {
+                    "command": "workbench.action.moveActiveEditorGroupLeft",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "r"],
+            "commands": [
+                {
+                    "command": "workbench.action.moveActiveEditorGroupRight",
+                    "args": []
+                }
+            ]
+        },
+        {
             "before": ["<Leader>", "w"],
             "commands": [":w"]
         },
@@ -87,6 +110,18 @@
             "before": [";"],
             "after": [":"]
         },
+        {
+            "before": [ "d" ],
+            "after": [ "\"", "_", "d" ]
+        },
+        {
+            "before": [ "D" ],
+            "after": [ "\"", "_", "D" ]
+        },
+        {
+            "before": [ "d", "d" ],
+            "after": [ "\"", "_", "d", "d" ]
+        }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -128,6 +163,14 @@
     "Lua.telemetry.enable": false,
     "git.alwaysShowStagedChangesResourceGroup": true,
     "git.autofetch": "all",
+    // Worst default true ever
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.suggest.localityBonus": true,
+    // Controls how suggestions are pre-selected when showing the suggest list.
+    //  - first: Always select the first suggestion.
+    //  - recentlyUsed: Select recent suggestions unless further typing selects one, e.g. `console.| -> console.log` because `log` has been completed recently.
+    //  - recentlyUsedByPrefix: Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`.
+    "editor.suggestSelection": "recentlyUsed",
     "editor.renderWhitespace": "all",
     "eslint.alwaysShowStatus": true,
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
@@ -160,14 +203,56 @@
                 }
             },
             {
-                "scope": ["storage.type"],
+                "scope": ["entity.name.type"],
+                "settings": {
+                    "foreground": "#97e1f1",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": ["keyword"],
                 "settings": {
                     "foreground": "#f286c4",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": ["keyword.operator"],
+                "settings": {
+                    "foreground": "#f286c4",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": ["string.template",
+                          "string.quoted.double"],
+                "settings": {
+                    "foreground": "#e7ee98",
                     "fontStyle": "italic"
                 }
             }
         ]
     },
     "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.openDefaultKeybindings": true
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.sideBar.location": "right",
+    "editor.autoIndent": "full",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "auto",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "git.confirmSync": false,
+    "editor.inlineSuggest.enabled": true,
+    "disable-copilot-comment-completions.active": true,
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true
+    },
+    "workbench.editor.highlightModifiedTabs": true,
 }
