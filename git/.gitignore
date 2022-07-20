@@ -1,0 +1,9 @@
+.vim/bundle/*
+.vim/undo/*
+.vim/view/*
+.vim/vim-plug-bundles/
+.config/*
+!.config/coc/extensions/db.json
+!.config/coc/extensions/package.json
+.vim/sessions/
+.vim/.netrwhist
