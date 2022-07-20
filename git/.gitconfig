@@ -20,3 +20,9 @@
 
 [includeIf "gitdir:G:/**"]
 	path = .gitconfig.windows
+
+[includeIf "gitdir:/Users/**"]
+  path = .gitconfig.macos
+
+[includeIf "gitdir:/home/**"]
+  path = .gitconfig.unix
