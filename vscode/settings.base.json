@@ -1,5 +1,5 @@
 {
-    "vim.neovimPath": "invalid",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "Lua.runtime.version": "LuaJIT",
     "Lua.workspace.preloadFileSize": 300000,
     "vim.useSystemClipboard": true,
@@ -17,53 +17,104 @@
     "vim.leader": ",",
     "vim.insertModeKeyBindings": [
         {
-            "before": ["h", "u"],
-            "after": ["<Esc>"]
+            "before": [
+                "h",
+                "u"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-            "before": [",", "h"],
-            "after": ["<Esc>"]
+            "before": [
+                ",",
+                "h"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["R"],
-            "after": ["N"]
+            "before": [
+                "R"
+            ],
+            "after": [
+                "N"
+            ]
         },
         {
-            "before": ["N"],
-            "after": ["n"]
+            "before": [
+                "N"
+            ],
+            "after": [
+                "n"
+            ]
         },
         {
-            "before": ["h"],
-            "after": ["h"]
+            "before": [
+                "h"
+            ],
+            "after": [
+                "h"
+            ]
         },
         {
-            "before": ["t"],
-            "after": ["k"]
+            "before": [
+                "t"
+            ],
+            "after": [
+                "k"
+            ]
         },
         {
-            "before": ["n"],
-            "after": ["j"]
+            "before": [
+                "n"
+            ],
+            "after": [
+                "j"
+            ]
         },
         {
-            "before": ["s"],
-            "after": ["l"]
+            "before": [
+                "s"
+            ],
+            "after": [
+                "l"
+            ]
         },
         {
-            "before": ["`"],
-            "commands": [":set hls!"]
+            "before": [
+                "`"
+            ],
+            "commands": [
+                ":set hls!"
+            ]
         },
         {
-            "before": ["<Leader>", "s"],
-            "commands": [":w"]
+            "before": [
+                "<Leader>",
+                "s"
+            ],
+            "commands": [
+                ":w"
+            ]
         },
         {
-            "before": ["<Leader>", "w"],
-            "commands": [":w"]
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "commands": [
+                ":w"
+            ]
         },
         {
-            "before": ["<Leader>", "p"],
+            "before": [
+                "<Leader>",
+                "p"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.quickOpen",
@@ -72,7 +123,10 @@
             ]
         },
         {
-            "before": ["<Leader>", "t"],
+            "before": [
+                "<Leader>",
+                "t"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.showCommands",
@@ -81,7 +135,22 @@
             ]
         },
         {
-            "before": ["<Leader>", "c"],
+            "before": [
+                "<Leader>",
+                "c"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.togglePanel",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "l"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.moveActiveEditorGroupLeft",
@@ -90,7 +159,10 @@
             ]
         },
         {
-            "before": ["<Leader>", "r"],
+            "before": [
+                "<Leader>",
+                "r"
+            ],
             "commands": [
                 {
                     "command": "workbench.action.moveActiveEditorGroupRight",
@@ -99,70 +171,140 @@
             ]
         },
         {
-            "before": ["<Leader>", "w"],
-            "commands": [":w"]
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "commands": [
+                ":w"
+            ]
         },
         {
-            "before": ["<Space>", "<Space>"],
-            "after": ["<Enter>"]
+            "before": [
+                "<Space>",
+                "<Space>"
+            ],
+            "after": [
+                "<Enter>"
+            ]
         },
         {
-            "before": [";"],
-            "after": [":"]
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
         },
         {
-            "before": [ "d" ],
-            "after": [ "\"", "_", "d" ]
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
         },
         {
-            "before": [ "D" ],
-            "after": [ "\"", "_", "D" ]
+            "before": [
+                "D"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "D"
+            ]
         },
         {
-            "before": [ "d", "d" ],
-            "after": [ "\"", "_", "d", "d" ]
+            "before": [
+                "d",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["h"],
-            "after": ["h"]
+            "before": [
+                "h"
+            ],
+            "after": [
+                "h"
+            ]
         },
         {
-            "before": ["t"],
-            "after": ["k"]
+            "before": [
+                "t"
+            ],
+            "after": [
+                "k"
+            ]
         },
         {
-            "before": ["n"],
-            "after": ["j"]
+            "before": [
+                "n"
+            ],
+            "after": [
+                "j"
+            ]
         },
         {
-            "before": ["s"],
-            "after": ["l"]
+            "before": [
+                "s"
+            ],
+            "after": [
+                "l"
+            ]
         },
         {
-            "before": ["`"],
-            "commands": [":set hls!"]
+            "before": [
+                "`"
+            ],
+            "commands": [
+                ":set hls!"
+            ]
         },
         {
-            "before": ["<Space>", "<Space>"],
-            "after": ["<Enter>"]
+            "before": [
+                "<Space>",
+                "<Space>"
+            ],
+            "after": [
+                "<Enter>"
+            ]
         },
         {
-            "before": [";"],
-            "after": [":"]
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
         },
     ],
     "vim.commandLineModeKeyBindingsNonRecursive": [
         {
-            "before": ["<Space>", "<Space>"],
-            "after": ["<Enter>"]
+            "before": [
+                "<Space>",
+                "<Space>"
+            ],
+            "after": [
+                "<Enter>"
+            ]
         },
     ],
     "security.workspace.trust.untrustedFiles": "open",
     "Lua.telemetry.enable": false,
     "git.alwaysShowStagedChangesResourceGroup": true,
     "git.autofetch": "all",
+    // Vscode merge editor
+    "git.mergeEditor": true,
     // Worst default true ever
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.suggest.localityBonus": true,
@@ -172,8 +314,6 @@
     //  - recentlyUsedByPrefix: Select suggestions based on previous prefixes that have completed those suggestions, e.g. `co -> console` and `con -> const`.
     "editor.suggestSelection": "recentlyUsed",
     "editor.renderWhitespace": "all",
-    "eslint.alwaysShowStatus": true,
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "explorer.confirmDelete": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "powershell.startAsLoginShell.linux": true,
@@ -185,9 +325,8 @@
     "terminal.integrated.shellIntegration.enabled": true,
     "workbench.startupEditor": "none",
     "extensions.ignoreRecommendations": true,
-    "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Dracula Soft",
+    "workbench.colorTheme": "Auska Dracula",
     "editor.fontFamily": "'Fira Code', Consolas",
     "editor.fontSize": 12,
     "editor.fontLigatures": true,
@@ -196,36 +335,46 @@
         "functions": "#9bee94",
         "textMateRules": [
             {
-                "scope": ["storage.type"],
+                "scope": [
+                    "storage.type"
+                ],
                 "settings": {
                     "foreground": "#fdc2e3",
                     "fontStyle": "italic"
                 }
             },
             {
-                "scope": ["entity.name.type"],
+                "scope": [
+                    "entity.name.type"
+                ],
                 "settings": {
                     "foreground": "#97e1f1",
                     "fontStyle": ""
                 }
             },
             {
-                "scope": ["keyword"],
+                "scope": [
+                    "keyword"
+                ],
                 "settings": {
                     "foreground": "#f286c4",
                     "fontStyle": "italic"
                 }
             },
             {
-                "scope": ["keyword.operator"],
+                "scope": [
+                    "keyword.operator"
+                ],
                 "settings": {
                     "foreground": "#f286c4",
                     "fontStyle": ""
                 }
             },
             {
-                "scope": ["string.template",
-                          "string.quoted.double"],
+                "scope": [
+                    "string.template",
+                    "string.quoted.double"
+                ],
                 "settings": {
                     "foreground": "#e7ee98",
                     "fontStyle": "italic"
@@ -255,4 +404,21 @@
         "markdown": true
     },
     "workbench.editor.highlightModifiedTabs": true,
+    "editor.minimap.enabled": false,
+    // Eslint setup
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.run": "onType",
+    "eslint.codeActionsOnSave.mode": "all",
+    // Eslint as formatter
+    "eslint.format.enable": true,
+    // Enable onsave
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.panel.defaultLocation": "left",
+    "autoHide.autoHidePanel": false,
+    "githubPullRequests.terminalLinksHandler": "github",
+    "tab-groups.gitBranchGroups": "Nothing",
+    "tab-groups.relativePaths": true
 }
