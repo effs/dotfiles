@@ -6,9 +6,12 @@
 	unalias = config --global --unset-all
 
 	up = !git fetch && git rebase origin/master
-	
+
 	pushit = "!fn() { git push --tags origin $(git branch --show-current); }; fn"
+	pushitto = "!fn() { git push --tags origin $(git branch --show-current):$1; }; fn"
 	pushitf = "!fn() { git push --tags --force-with-lease origin $(git branch --show-current); }; fn"
+	pushittof = "!fn() { git push --tags --force-with-lease origin $(git branch --show-current):$1; }; fn"
+
 
 	l = log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
 
@@ -23,7 +26,7 @@
 	ac = a --dry-run
 	af = add
 	ap = add --patch
-	aa = add -u .
+	au = add -u .
 
 	discard = co HEAD
 
@@ -46,7 +49,7 @@
 
 	wt = worktree
 	wtl = worktree list
-	wtadd = "!fn() { git worktree add -b $2 ../$1 $3; git wts $1; }; fn"
+	wtadd = "!fn() { git worktree add -b $2 ../$1 $3; }; fn"
 	wta-frommain = "!fn() { if [ -d .git ]; then git worktree add -b $2 ../$1 $3; git wts $1; exit 0; fi; echo you-are-in-the-wrong-dir-dummy; exit 1; }; fn"
     wta = wtadd
 	wtremove = "!EX=$(git wtb $1); fn() { git worktree remove $1 && git branch -d $EX; }; fn"
