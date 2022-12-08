@@ -50,8 +50,9 @@
 	wt = worktree
 	wtl = worktree list
 	wtadd = "!fn() { git worktree add -b $2 ../$1 $3; }; fn"
-	wta-frommain = "!fn() { if [ -d .git ]; then git worktree add -b $2 ../$1 $3; git wts $1; exit 0; fi; echo you-are-in-the-wrong-dir-dummy; exit 1; }; fn"
     wta = wtadd
+	wtaddexisting = "!fn() { git worktree add ../$1 $2; }; fn"
+	wte = wtaddexisting
 	wtremove = "!EX=$(git wtb $1); fn() { git worktree remove $1 && git branch -d $EX; }; fn"
 	wtremoveforce = "!EX=$(git wtb $1); fn() { git worktree remove --force $1 && git branch -D $EX; }; fn"
 	wtbranch = "!fn() { echo $(git worktree list | rg $1 | cut -d '[' -f 2 | cut -d ']' -f 1); }; fn"
