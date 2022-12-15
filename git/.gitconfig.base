@@ -1,9 +1,11 @@
 [init]
 	defaultBranch = main
+
 [alias]
+	alias = "!fn() { git config --global --add alias.$1 $2; }; fn"
+	unalias = "!fn() { git config --global --unset-all alias.$1; }; fn"
+
 	aliases = "!git config -l | grep alias | cut -c 7-"
-	alias = config --global --add
-	unalias = config --global --unset-all
 
 	up = !git fetch && git rebase origin/master
 
